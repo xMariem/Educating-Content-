@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+    display: block;
+    text-transform: uppercase;
+
+}
+
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*small screens*/
+@media (min-width: 768px) {
+    .container{
+        width:750px
+    }
+}
+/* medium screens */
+@media (min-width:992px) {
+    .container{
+        width:970px
+    }
+}
+/*large screens*/
+@media (min-width:1200px) {
+    .container{
+        width:1170px
+    }
+}
+
+.wrapper{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.wrapper .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(6,110px);
+    gap:25px
+}
+
+.wrapper .container .box{
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .container .image{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 300px;
+
+}
+.wrapper .container .box:nth-of-type(1) .image{
+    background-image: url(./imgs/collage.jpg);
+
+}
+
+.wrapper .container .box:nth-of-type(3) .image{
+    background-image: url(./imgs/the-more-you-know\,-the-more-you-grow.jpg);
+
+}
+
+.wrapper .container .box:nth-of-type(4) .image{
+    background-image: url(./imgs/head-in-the-clouds.jpg);
+
+}
+.wrapper .container .box:nth-of-type(5) .image{
+    background-image: url(./imgs/collage\ \(1\).jpg);
+
+}
+/* start grid area */
+.wrapper .container .box:nth-of-type(1){
+    grid-area:1 / 1 / span 4;
+}
+
+.wrapper .container .box:nth-of-type(2){
+    grid-area:1 / 2 / span 2;
+}
+
+.wrapper .container .box:nth-of-type(3){
+    grid-area:1 / 3 / span 5;
+}
+
+.wrapper .container .box:nth-of-type(4){
+    grid-area:5 / 1 / span 2;
+}
+
+.wrapper .container .box:nth-of-type(5){
+    grid-area:3 / 2 / span 4;
+}
+
+.wrapper .container .box:nth-of-type(6){
+    grid-area:6 / 3 / span 1;
+}
+/* end grid area */
+
+
+
+/* styles */ 
+
+.wrapper .container .box .text{
+    color:#fff;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
+    
+    
+}
+.wrapper .container .box .text h2{
+    text-transform: uppercase;
+    font-weight: 300;
+    
+    
+}
+.wrapper .container .box .text p{
+    margin:15px 0 15px;
+    line-height: 1.7;
+    font-weight: 300;
+
+}
+
+.wrapper .container .box .text a.button{
+    padding:9px 15px;
+    background-color: rgb(74 39 26 / 8%);
+    width: fit-content;
+    font-weight: 100;
+    border-radius: 5px;
+    
+}
+
+.wrapper .container .box:nth-of-type(1) .text {
+    background-color: #EDBF47;
+}
+
+.wrapper .container .box:nth-of-type(2) .text {
+    background-color: #EC774B;
+    text-align: center;
+}
+
+.wrapper .container .box:nth-of-type(2) .text p{
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+.wrapper .container .box:nth-of-type(2) .text .writer
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+.wrapper .container .box:nth-of-type(2) .text .writer span{
+    font-weight: 100;
+}
+
+.wrapper .container .box:nth-of-type(2) .text .writer i,
+.wrapper .container .box:nth-of-type(6) .text i
+{
+    color:rgb(74 39 26 / 15%);
+    margin-right:10px;
+    font-size: 2em;
+
+
+}
+
+.wrapper .container .box:nth-of-type(3) .text{
+    background-color: #74CEE4;
+}
+
+.wrapper .container .box:nth-of-type(4) .text{
+    background-color: #6FC191;
+}
+
+.wrapper .container .box:nth-of-type(5) .text{
+    background-color: #E16C6C;
+}
+
+.wrapper .container .box:nth-of-type(6) .text{
+    background-color: #C389CE;
+    align-items: center;
+    font-size: 25px;
+}
+
+.wrapper .container .box:nth-of-type(6) .text .event-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* responsive with grid area */
+@media (max-width:992px) {
+
+    .wrapper .container{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows:auto;
+
+    }
+    
+    .wrapper .container .box{
+        grid-area: auto !important;        
+
+    }
+
+ 
+}
